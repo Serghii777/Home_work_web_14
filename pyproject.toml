@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "home-work-web-13"
+version = "0.1.0"
+description = ""
+authors = ["Serghii777 <142201494+Serghii777@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.3"
+django-taggit = "^5.0.1"
+certifi = "^2024.2.2"
+bson = "^0.5.10"
+pymongo = "^4.6.3"
+pillow = "^10.2.0"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+sqlalchemy = "^2.0.29"
+psycopg2-binary = "^2.9.9"
+alembic = "^1.13.1"
+asyncpg = "^0.29.0"
+email-validator = "^2.1.1"
+python-jose = {extras = ["cryptography"], version = "^3.3.0"}
+pydantic = {extras = ["email"], version = "^2.6.4"}
+python-multipart = "^0.0.9"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+libgravatar = "^1.0.4"
+pydantic-settings = "^2.2.1"
+fastapi-mail = "^1.4.1"
+cloudinary = "^1.39.1"
+django-environ = "^0.11.2"
+environ = "^1.0"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
