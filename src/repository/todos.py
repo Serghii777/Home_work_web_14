@@ -43,7 +43,8 @@ async def create_contact(body: ContactSchema, db: AsyncSession):
     :return: The contact object that was created
     :doc-author: Trelent
     """
-    contact = Contact(**body.model_dump(exclude_unset=True))
+    contact_data = body.dict(exclude_unset=True)
+    contact = Contact(**contact_data)
     db.add(contact)
     await db.commit()
     await db.refresh(contact)
@@ -64,12 +65,9 @@ async def update_contact(contact_id: int, body: ContactUpdateSchema, db: AsyncSe
     result = await db.execute(stmt)
     contact = result.scalar_one_or_none()
     if contact:
-        contact.first_name = body.first_name
-        contact.last_name = body.last_name
-        contact.email = body.email
-        contact.phone_number = body.phone_number
-        contact.birthday = body.birthday
-        contact.additional_info = body.additional_info
+        contact_data = body.dict(exclude_unset=True)
+        for key, value in contact_data.items():
+            setattr(contact, key, value)
         await db.commit()
         await db.refresh(contact)
     return contact

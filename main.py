@@ -59,7 +59,7 @@ async def user_agent_ban_middleware(request: Request, call_next: Callable):
     return response
 
 
-BASE_DIR = Path(".")
+BASE_DIR = Path(__file__).parent
 
 app.mount("/static", StaticFiles(directory=BASE_DIR / "src" / "static"), name="static")
 

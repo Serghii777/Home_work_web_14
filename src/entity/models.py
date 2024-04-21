@@ -8,7 +8,7 @@ class Base(DeclarativeBase):
     pass
 
 class Contact(Base):
-    __tablename__ = 'contacts'
+    __tablename__ = 'contact'
 
     id = Column(Integer, primary_key=True, index=True)
     first_name = Column(String)

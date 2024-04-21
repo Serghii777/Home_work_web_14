@@ -45,7 +45,7 @@ REST API routes Rest TODOS
 
 REST API routes Auth
 =========================
-.. automodule:: src.routes.Auth
+.. automodule:: src.routes.auth
   :members:
   :undoc-members:
   :show-inheritance:
@@ -54,15 +54,6 @@ REST API routes Auth
 REST API routes Users
 =========================
 .. automodule:: src.routes.users
-  :members:
-  :undoc-members:
-  :show-inheritance:
-
-
-
-REST API service Auth
-=========================
-.. automodule:: src.services.auth
   :members:
   :undoc-members:
   :show-inheritance:
